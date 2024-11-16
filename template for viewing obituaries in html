@@ -1,0 +1,19 @@
+<h1>All Obituaries</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Date of Death</th>
+        <th>Author</th>
+        <th>Content</th>
+    </tr>
+    {% for obituary in obituaries %}
+        <tr>
+            <td>{{ obituary.name }}</td>
+            <td>{{ obituary.date_of_birth }}</td>
+            <td>{{ obituary.date_of_death }}</td>
+            <td>{{ obituary.author }}</td>
+            <td>{{ obituary.content|slice:":100" }}...</td>
+        </tr>
+    {% endfor %}
+</table>
